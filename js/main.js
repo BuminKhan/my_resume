@@ -19,3 +19,11 @@ if (form) {
     };
 }
 
+window.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.animate-on-load');
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add('visible');
+    }, index * 200);
+  });
+});
